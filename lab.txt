@@ -1,0 +1,13 @@
+Q1: Basic Authentication and Session Authentication. It is managed in the settings.py under the authlab documents.The REST_FRAMEWORK manages the DEFAULT_AUTHENTICATION_CLASSES.
+Q2: Basic Authentication
+Q3: Session Authentication is the session created by the server and is saved in the RAM or database. Each request will bring the session in the header.
+    Token Authentication is after permission validation the client will save a token. Each request will bring the session in the header.
+    It just like after Basic Authentication (validate username and password), there will be a token sent to client. The token can be expired and need to be resent a new one.
+Q4: 1. Request grant from user: The bitbucket.org requests authorization to access Google from the user
+    2. Get grant from user: User authorized the request, bitbucket.org receives an authorization grant
+    3. Reuqest grant from Google: Bitbucket.org requests an access token from the Google by presenting authentication of its own identity, and the authorization grant.
+    4. Get grant from Google: If Bitbucket.org identity is authenticated and the authorization grant is valid, the Google issues an access token to the bitbucket.org. Authorization is complete.
+    5. Request resource and provide token to Google: Bitbucket.org requests the resource from Google and presents the access token for authentication
+    6. Get resource from Google: If the access token is valid, google serves the resource to Bitbucket.org
+    References: https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2
+Q5: https://github.com/solitariaa/authentication-lab.git
